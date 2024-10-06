@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò Chơi Bỏ Rác</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>Trò Chơi Bỏ Rác Vào Đúng Thùng Quy Định</h1>
+    <div class="game-container">
+        <div class="trash-container">
+            <img src="rau.jpg" class="trash" id="vegetable" draggable="true" ondragstart="drag(event)">
+            <img src="lonnuoc.jpg" class="trash" id="can" draggable="true" ondragstart="drag(event)">
+            <img src="chaithuytinh.jpg" class="trash" id="bottle" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div class="bin-container">
+            <img src="rachuuco.jpg" class="bin" id="organic" ondrop="drop(event)" ondragover="allowDrop(event)" alt="Rác Hữu Cơ">
+            <img src="ractaiche.jpg" class="bin" id="recycle" ondrop="drop(event)" ondragover="allowDrop(event)" alt="Rác Tái Chế">
+            <img src="racvoco.jpg" class="bin" id="inorganic" ondrop="drop(event)" ondragover="allowDrop(event)" alt="Rác Vô Cơ">
+        </div>
+    </div>
+    <audio id="correctSound" src="votay.MP3"></audio>
+    <audio id="wrongSound" src="y2mate.com - Âm thanh sai.mp3"></audio>
+    <script src="script.js"></script>
+    <div id="message"></div>
+    <div id="errorMessage" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:red; color:white; padding:10px; border-radius:5px; opacity:0; transition: opacity 0.5s;">
+    </div>
+    
+
+</body>
+</html>
